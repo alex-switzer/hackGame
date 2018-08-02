@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 using Assets.code;
 
-public class console : MonoBehaviour {
+public class Console : MonoBehaviour {
 
     
     public const string prefix = ">";
@@ -30,27 +30,51 @@ public class console : MonoBehaviour {
         //add help command
 
         //add to list |         | Name | Alias                        | Description |
-        commands.Add(new command("Help", new string[] { "help", "?" }, "Get help", (x) => {
+        commands.Add(new command("Help", new string[] { "help", "?" },
+            "Provides help information for Windows commands.",
+            (x) => {
             //what to do
-            string list = "";
+            string list = "For more information on a specific command, type HELP command-name" + Environment.NewLine;
 
-            for (int i = 0; i < commands.Count; i++)
+            if (x.Length == 1)
             {
-                list += commands[i].name + " [";
-                for (int k = 0; k < commands[i].alias.Length - 1; k++)
+                for (int i = 0; i < commands.Count; i++)
                 {
-                    list += commands[i].alias[k] + ",";
+                    list += commands[i].name.PadRight(8) + " " + commands[i].description + Environment.NewLine;
                 }
-                list += commands[i].alias[commands[i].alias.Length - 1] + "]" + Environment.NewLine;
 
-                list += commands[i].description + Environment.NewLine + Environment.NewLine;
-
+                list += Environment.NewLine + "For more information on tools see the command-line reference in the online help.";
             }
+            else
+            {
+                command command = null;
 
+                for (int i = 0; i < commands.Count; i++)
+                {
+                    for (int k = 0; k < commands[i].alias.Length; k++)
+                    {
+                        if (commands[i].alias[k].ToLower() == x[1].ToLower())
+                        {
+                            command = commands[i];
+                        }
+                    }
+                }
+
+                if (command != null)
+                {
+                    list = command.description;
+                }
+                else
+                {
+                    list = "This command is not supported by the help utility.  Try \"" + commands[1] + " /?\".";
+                }
+            }
             return list;
         }));
 
-       
+        commands.Add(new command("Test", new string[] { "test" }, "This a test", (x) => {
+            return "test done";
+        }));
 
     }
 
@@ -61,9 +85,15 @@ public class console : MonoBehaviour {
         string tail = output.text;
         input.text = "";
 
-        string result = "No a cmd sorry";
-
         string[] commandSplit = command.Split(' ');
+
+        string result = "";
+
+        if (commandSplit[0] != null)
+        {
+            result = "'" + commandSplit[0] + "' is not recognized as an internal or external command," + Environment.NewLine +
+                        "operable program or batch file.";
+        }
 
         for (int i = 0; i < commands.Count; i++)
         {
@@ -76,7 +106,7 @@ public class console : MonoBehaviour {
             }
         }
 
-        output.text = prefix + command + Environment.NewLine + tail;
+        output.text = prefix + command + Environment.NewLine + result + Environment.NewLine + tail;
 
     }
 

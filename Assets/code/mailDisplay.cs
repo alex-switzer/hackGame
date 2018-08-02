@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class mailDisplay : MonoBehaviour {
+public class MailDisplay : MonoBehaviour {
 
-    public mailData mail;
+    public MailData mail;
 
     public Text address;
     public Text subject;
@@ -36,7 +36,7 @@ public class mailDisplay : MonoBehaviour {
 
             mailInfo.Translate(new Vector3(-513, 0,0));
 
-            mailDisplay data = mailInfo.GetComponent<mailDisplay>();
+            MailDisplay data = mailInfo.GetComponent<MailDisplay>();
 
             data.mail = mail;
 

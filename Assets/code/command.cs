@@ -1,18 +1,26 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.code
 {
-    class command
+    public class command
     {
         public string name;
-        public Array alias;
+        public string[] alias;
 
-        
-        public virtual string runCommand()
+        public string description;
+
+        public Func<string, string> action;
+
+        public command(string name, string[] alias, string description, Func<string, string> action)
         {
-            Debug.Log("command not set");
-            return "command not set";
+            this.name = name;
+            this.alias = alias;
+
+            this.description = description;
+
+            this.action = action;
         }
 
     }

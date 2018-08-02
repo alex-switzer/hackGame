@@ -143,7 +143,7 @@ RectTransform:
   m_Father: {fileID: 560923654}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.120000005}
+  m_AnchorMin: {x: 0, y: 0.11368424}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1038,11 +1038,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'type help for help
-
-    $help
-
-    this is the help text'
+  m_Text: 
 --- !u!222 &293112001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1917,7 +1913,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 1, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1997,7 +1993,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 400, y: -100}
+  m_SizeDelta: {x: 402, y: -100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &554232508
 MonoBehaviour:
@@ -3625,7 +3621,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 79119887}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.88
+  m_Size: 0.88631576
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

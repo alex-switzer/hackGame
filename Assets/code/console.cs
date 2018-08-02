@@ -8,8 +8,9 @@ using Assets.code;
 
 public class console : MonoBehaviour {
 
-    public string prefix = ">";
-    public string usernameString = "user@192.168.0.3 ";
+    
+    public const string prefix = ">";
+    public const string usernameString = "user@192.168.0.3 ";
 
     public InputField input;
     public Text output;
@@ -18,20 +19,24 @@ public class console : MonoBehaviour {
     private List<command> commands = new List<command>();
 
 
-    // Use this for initialization
     void Start () {
+        //set text
         username.text = usernameString + prefix;
 
-        input.onEndEdit.AddListener(delegate { runCommand(); });
+        //call RunCommand on End Edit of input
+        input.onEndEdit.AddListener(delegate { RunCommand(); });
 
-        //make cmds
 
-        commands.Add(new command("Help", new string[] { "help", "?" }, "Get help", (a) => {
+        //add help command
+
+        //add to list |         | Name | Alias                        | Description |
+        commands.Add(new command("Help", new string[] { "help", "?" }, "Get help", (x) => {
+            //what to do
             string list = "";
 
             for (int i = 0; i < commands.Count; i++)
             {
-                list += commands[i].name + "[";
+                list += commands[i].name + " [";
                 for (int k = 0; k < commands[i].alias.Length - 1; k++)
                 {
                     list += commands[i].alias[k] + ",";
@@ -45,18 +50,12 @@ public class console : MonoBehaviour {
             return list;
         }));
 
-        commands.Add(new command("test", new string[] { "test", "uu" }, "a test cmd", (a) => {
-            
-
-            
-
-            return "tersdrgjkljfdgljld";
-        }));
+       
 
     }
 
 
-    void runCommand()
+    void RunCommand()
     {
         string command = input.text;
         string tail = output.text;
@@ -64,24 +63,20 @@ public class console : MonoBehaviour {
 
         string result = "No a cmd sorry";
 
-        string[] aa = command.Split(' ');
+        string[] commandSplit = command.Split(' ');
 
         for (int i = 0; i < commands.Count; i++)
         {
             for (int k = 0; k < commands[i].alias.Length; k++)
             {
-                if (commands[i].alias[k].ToLower() == aa[0].ToLower())
+                if (commands[i].alias[k].ToLower() == commandSplit[0].ToLower())
                 {
-                    result = commands[i].action.Invoke(command);
+                    result = commands[i].function.Invoke(commandSplit);
                 }
             }
         }
 
-        
-
-
-        output.text = prefix + command + Environment.NewLine + result + Environment.NewLine + tail;
-
+        output.text = prefix + command + Environment.NewLine + tail;
 
     }
 

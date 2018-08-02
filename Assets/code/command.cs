@@ -11,16 +11,16 @@ namespace Assets.code
 
         public string description;
 
-        public Func<string, string> action;
+        public Func<string[], string> function;
 
-        public command(string name, string[] alias, string description, Func<string, string> action)
+        public command(string name, string[] alias, string description, Func<string[], string> function)
         {
             this.name = name;
             this.alias = alias;
 
             this.description = description;
 
-            this.action = action;
+            this.function = function;
         }
 
     }

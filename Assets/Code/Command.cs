@@ -1,26 +1,22 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.code
+namespace Assets.Code
 {
-    public class command
+    public class Command
     {
         public string name;
         public string[] alias;
 
         public string description;
 
-        public Func<string[], string> function;
+        public Command() { }
 
-        public command(string name, string[] alias, string description, Func<string[], string> function)
+        public virtual string function(string[] x, CommandData data)
         {
-            this.name = name;
-            this.alias = alias;
-
-            this.description = description;
-
-            this.function = function;
+            return "CMD not setup" + Environment.NewLine + data.tail;
         }
 
     }

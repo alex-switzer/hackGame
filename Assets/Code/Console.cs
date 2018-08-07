@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using Assets.code;
+using Assets.Code;
+using Assets.Code.Commands;
 
 public class Console : MonoBehaviour {
 
@@ -16,7 +16,7 @@ public class Console : MonoBehaviour {
     public Text output;
     public Text username;
 
-    private List<command> commands = new List<command>();
+    private List<Command> commands = new List<Command>();
 
 
     void Start () {
@@ -26,55 +26,10 @@ public class Console : MonoBehaviour {
         //call RunCommand on End Edit of input
         input.onEndEdit.AddListener(delegate { RunCommand(); });
 
-
         //add help command
-
-        //add to list |         | Name | Alias                        | Description |
-        commands.Add(new command("Help", new string[] { "help", "?" },
-            "Provides help information for Windows commands.",
-            (x) => {
-            //what to do
-            string list = "For more information on a specific command, type HELP command-name" + Environment.NewLine;
-
-            if (x.Length == 1)
-            {
-                for (int i = 0; i < commands.Count; i++)
-                {
-                    list += commands[i].name.PadRight(8) + " " + commands[i].description + Environment.NewLine;
-                }
-
-                list += Environment.NewLine + "For more information on tools see the command-line reference in the online help.";
-            }
-            else
-            {
-                command command = null;
-
-                for (int i = 0; i < commands.Count; i++)
-                {
-                    for (int k = 0; k < commands[i].alias.Length; k++)
-                    {
-                        if (commands[i].alias[k].ToLower() == x[1].ToLower())
-                        {
-                            command = commands[i];
-                        }
-                    }
-                }
-
-                if (command != null)
-                {
-                    list = command.description;
-                }
-                else
-                {
-                    list = "This command is not supported by the help utility.  Try \"" + commands[1] + " /?\".";
-                }
-            }
-            return list;
-        }));
-
-        commands.Add(new command("Test", new string[] { "test" }, "This a test", (x) => {
-            return "test done";
-        }));
+        commands.Add(new Assets.Code.Commands.Help());
+        commands.Add(new Assets.Code.Commands.Ping());
+        commands.Add(new Assets.Code.Commands.Clear());
 
     }
 
@@ -92,7 +47,7 @@ public class Console : MonoBehaviour {
         if (commandSplit[0] != null)
         {
             result = "'" + commandSplit[0] + "' is not recognized as an internal or external command," + Environment.NewLine +
-                        "operable program or batch file.";
+                        "operable program or batch file." + Environment.NewLine + tail;
         }
 
         for (int i = 0; i < commands.Count; i++)
@@ -101,46 +56,53 @@ public class Console : MonoBehaviour {
             {
                 if (commands[i].alias[k].ToLower() == commandSplit[0].ToLower())
                 {
-                    result = commands[i].function.Invoke(commandSplit);
+                    CommandData data = new CommandData
+                    {
+                        commands = commands,
+                        tail = tail
+                    };
+
+                    result = commands[i].function(commandSplit, data);
                 }
             }
         }
 
-        output.text = prefix + command + Environment.NewLine + result + Environment.NewLine + tail;
+        output.text = prefix + command + Environment.NewLine + result;
 
+        input.Select();
     }
 
     /*
-    Help
+     Help
 
-    Ping
-    Cd
-    Cat
-    Head
-    Tale
-    File
-    Ls
-    Mk
-    Rm
-    Chmod
-    Kill
-    Diff
-    VI
-    Nano
-    HexDump
-    
-    Sphinx
-    Hackcat
-    Exploit-DB
-    IP-Trace
-    Hide
-    DDOS
-    File-Analyser
-    Fuzzer
-    Take-Control
-    Webcam
-    NetMap
-    SQL-In
+     Ping
+     Cd
+     Cat
+     Head
+     Tale
+     File
+     Ls
+     Mk
+     Rm
+     Chmod
+     Kill
+     Diff
+     VI
+     Nano
+     HexDump
+     
+     Sphinx
+     Hackcat
+     Exploit-DB
+     IP-Trace
+     Hide
+     DDOS
+     File-Analyser
+     Fuzzer
+     Take-Control
+     Webcam
+     NetMap
+     SQL-In
     //*/
 
 }

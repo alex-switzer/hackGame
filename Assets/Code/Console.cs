@@ -110,5 +110,37 @@ public class Console : MonoBehaviour {
 
     }
 
+    /*
+    Help
+
+    Ping
+    Cd
+    Cat
+    Head
+    Tale
+    File
+    Ls
+    Mk
+    Rm
+    Chmod
+    Kill
+    Diff
+    VI
+    Nano
+    HexDump
     
+    Sphinx
+    Hackcat
+    Exploit-DB
+    IP-Trace
+    Hide
+    DDOS
+    File-Analyser
+    Fuzzer
+    Take-Control
+    Webcam
+    NetMap
+    SQL-In
+    //*/
+
 }

@@ -1011,8 +1011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35.1, y: 15}
-  m_SizeDelta: {x: -69.7, y: -30}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 0, y: -30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293112000
 MonoBehaviour:
@@ -1412,10 +1412,10 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 515, y: -100}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -250, y: -50}
+  m_SizeDelta: {x: -500, y: -100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554232508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2777,7 +2777,7 @@ MonoBehaviour:
   mail: {fileID: 11400000, guid: 10107bbed6bc19f489d776afa5b6aba2, type: 2}
   address: {fileID: 187447515}
   subject: {fileID: 130847718}
-  body: {fileID: 669375609}
+  body: {fileID: 0}
   openMail: {fileID: 0}
   closeMail: {fileID: 303432660}
   mailInfo: {fileID: 0}
@@ -2791,6 +2791,7 @@ GameObject:
   - component: {fileID: 1219867168}
   - component: {fileID: 1219867169}
   - component: {fileID: 1219867170}
+  - component: {fileID: 1219867171}
   m_Layer: 5
   m_Name: tabs
   m_TagString: Untagged
@@ -2849,10 +2850,23 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 310.24, y: 100}
+  m_CellSize: {x: 375.9, y: 100}
   m_Spacing: {x: 10, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
+--- !u!114 &1219867171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1219867167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d6a51c8ad6e3348a0216b5a1b9835d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentRect: {fileID: 1893079285}
+  gridLayout: {fileID: 1219867170}
 --- !u!1 &1302793383
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,7 +3024,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 79119887}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.8105263
+  m_Size: 0.86105263
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3519,7 +3533,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -78.6, y: 30}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &1749398969 stripped
 RectTransform:
@@ -3670,7 +3684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -49.999992}
+  m_AnchoredPosition: {x: 0, y: -49.999996}
   m_SizeDelta: {x: 500, y: -100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!225 &1810504328

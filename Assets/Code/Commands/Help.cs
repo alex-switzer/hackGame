@@ -1,57 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.Code;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine.UI;
 
-namespace Assets.Code.Commands
+namespace backupGame.command
 {
-    class Help : Command
+    class Help : commands
     {
-        public Help()
+        public Help(InputField input, Text output, Text username)
         {
-            name = "Help";
+            this.input = input;
+            this.output = output;
+            this.username = username;
 
-            alias =  new string[] { "help", "?" };
-            description = "Provides help information for Windows commands.";
+            name = "Help";
+            description = "Learn about the use of each command.";
         }
 
-        public override string function(string[] x, CommandData data)
+        public override void lantern(List<string> result, List<commands> listOfCommands)
         {
-            string list = "For more information on a specific command, type HELP command-name" + Environment.NewLine;
-
-            if (x.Length == 1)
+            output.text += "List of commands:" + Environment.NewLine;
+            const int paddingBuffer = 30; //default gap between command and description 
+            
+            foreach (var command in listOfCommands)
             {
-                for (int i = 0; i < data.commands.Count; i++)
-                {
-                    list += data.commands[i].name.PadRight(8) + " " + data.commands[i].description + Environment.NewLine;
-                }
-
-                list += Environment.NewLine + "For more information on tools see the command-line reference in the online help.";
+                int paddingGap = paddingBuffer - command.name.Length;
+                if (paddingGap < 0) paddingGap *= -1; //if the name is longer than the buffer of 30, avoid errors by avoiding negative numbers
+                output.text += ("Command:  " + command.name + Environment.NewLine + "Description: " + command.description + Environment.NewLine );  //problem here, unsupported code
+                
             }
-            else
-            {
-                Command command = null;
 
-                for (int i = 0; i < data.commands.Count; i++)
-                {
-                    for (int k = 0; k < data.commands[i].alias.Length; k++)
-                    {
-                        if (data.commands[i].alias[k].ToLower() == x[1].ToLower())
-                        {
-                            command = data.commands[i];
-                        }
-                    }
-                }
-
-                if (command != null)
-                {
-                    list = command.description;
-                }
-                else
-                {
-                    list = "This command is not supported by the help utility.  Try \"" + data.commands[1] + " /?\".";
-                }
-            }
-            return list + Environment.NewLine + data.tail;
         }
 
     }

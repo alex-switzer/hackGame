@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
-  m_Name: Employer2
+  m_Name: Employer3
   m_EditorClassIdentifier: 
-  address: jason@hctech.com
-  subject: Look through this file
-  body: "Please find attached is a suspicious file that you need to look through.
-    Let me know what you find. \n-J"
+  address: jason@hctech
+  subject: You are fired
+  body: "Your peformance is unfortunately not what our company aims to uphold. Please
+    collect your things and go. \n-J"

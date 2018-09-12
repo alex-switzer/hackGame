@@ -9,7 +9,7 @@ public class MailData : ScriptableObject{
     public string address;
     public string subject;
     [TextArea]
-    public string boddy;
+    public string body;
     
 }
     

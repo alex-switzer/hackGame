@@ -1,29 +1,39 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine.UI;
 
-namespace Assets.Code.Commands
+namespace backupGame.command
 {
-    class Ping : Command
+    class Ping : commands
     {
-        public Ping()
+        public Ping(InputField input, Text output, Text username)
         {
+            this.input = input;
+            this.output = output;
+            this.username = username;
+
             name = "Ping";
-
-            alias = new string[] { "ping" };
-            description = "Pings a IP.";
+            description = "Find the response time to a specified IP.";
         }
 
-        public override string function(string[] x, CommandData data)
+        public override void lantern(List<string> result)
         {
-            if (x.Length <= 1)
+            Random rnd = new Random();
+            string errorMessage = "Use Ping [IP]";
+
+            if (result.Count == 2) // i.e. if the user entered the name of the command and some numbers to ping
             {
-                return "Use ping [IP] to ping an IP" + Environment.NewLine + data.tail;
+                if (stringClassifier.getIP(result[1]))
+                {
+                    output.text += ( "Pinging " + result[1] + "; Respone time " + rnd.Next(10, 100) + "ms");
+                }
             }
-
-            //TODO:
-            //add ping code
-
-            return "Done ping" + Environment.NewLine + data.tail;
+            else output.text += (errorMessage);
         }
+
 
     }
 }

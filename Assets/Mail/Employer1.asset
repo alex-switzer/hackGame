@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
   m_Name: Employer1
   m_EditorClassIdentifier: 
-  address: Employer
-  subject: New file
-  boddy: Can you look into this file
+  address: jason@hctech
+  subject: Welcome to my company!
+  body: "You passed the entry requirements for a cybersecurity analyst very easily.
+    I look forward to working with you in the future. \n-J\n"

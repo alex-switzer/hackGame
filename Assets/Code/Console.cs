@@ -1,10 +1,13 @@
-﻿using System;
+﻿using backupGame;
+using backupGame.command;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+//using static UnityEditor.Experimental.Build.AssetBundle.BuildCommandSet;
 
-using Assets.Code;
-using Assets.Code.Commands;
+
 
 public class Console : MonoBehaviour {
 
@@ -16,93 +19,82 @@ public class Console : MonoBehaviour {
     public Text output;
     public Text username;
 
-    private List<Command> commands = new List<Command>();
+    private List<commands> listOfCommands;
 
 
     void Start () {
-        //set text
-        username.text = usernameString + prefix;
+
+        listOfCommands = new List<commands>
+            {
+                new Help(input, output, username),
+                new backupGame.command.Ping(input, output, username),
+                new Sphinx(input, output, username),
+                new Clear(input, output, username),
+                new Lantern(input, output, username),
+                new IP_Trace(input, output, username),
+                new backupGame.command.Time(input, output, username),
+                new Hack(input, output, username)
+            };
 
         //call RunCommand on End Edit of input
         input.onEndEdit.AddListener(delegate { RunCommand(); });
 
-        //add help command
-        commands.Add(new Assets.Code.Commands.Help());
-        commands.Add(new Assets.Code.Commands.Ping());
-        commands.Add(new Assets.Code.Commands.Clear());
-
     }
-
 
     void RunCommand()
     {
-        string command = input.text;
-        string tail = output.text;
-        input.text = "";
+        string line = input.text;
 
-        string[] commandSplit = command.Split(' ');
+        List<string> userInputParamters = line.Split('"') //store all user input parameters
+             .Select((element, index) => index % 2 == 0  // If even index
+                                   ? element.Split(new[] { ' ' })  // Split the item
+                                   : new string[] { element })  // Keep the entire item
+             .SelectMany(element => element).ToList();
 
-        string result = "";
+        string errorText = "Please enter a valid command. For a full list of commands, type 'help'"; //setting the default message to an error
+        bool commandFound = false;
 
-        if (commandSplit[0] != null)
+        string userCommand = userInputParamters[0].ToLower(); //first parameter is always the command name
+
+        if (userInputParamters.Count != 0)
         {
-            result = "'" + commandSplit[0] + "' is not recognized as an internal or external command," + Environment.NewLine +
-                        "operable program or batch file." + Environment.NewLine + tail;
-        }
-
-        for (int i = 0; i < commands.Count; i++)
-        {
-            for (int k = 0; k < commands[i].alias.Length; k++)
+            for (int i = 0; i < listOfCommands.Count; i++)
             {
-                if (commands[i].alias[k].ToLower() == commandSplit[0].ToLower())
-                {
-                    CommandData data = new CommandData
-                    {
-                        commands = commands,
-                        tail = tail
-                    };
+                string registeredCommand = listOfCommands[i].name.ToLower();
 
-                    result = commands[i].function(commandSplit, data);
+                if (registeredCommand == userCommand)
+                {
+                    listOfCommands[i].lantern(userInputParamters); //execute the matching command
+
+                    if (registeredCommand == "help") listOfCommands[i].lantern(userInputParamters, listOfCommands);
+                    commandFound = true; //matching command found, declare success
+
                 }
+
             }
         }
 
-        output.text = prefix + command + Environment.NewLine + result;
+        if (commandFound == false && userInputParamters[0] != "") output.text += errorText; //only output error if input was not null. Fixes click away constant error message problem
+        
 
-        input.Select();
+        Reselect(output,input, commandFound); 
+
     }
 
-    /*
-     Help
+    public static void Reselect(Text output, InputField input, bool commandFound) //this routine simluates inherent command line functionality and cleanliness in putting commands
+    {
 
-     Ping
-     Cd
-     Cat
-     Head
-     Tale
-     File
-     Ls
-     Mk
-     Rm
-     Chmod
-     Kill
-     Diff
-     VI
-     Nano
-     HexDump
-     
-     Sphinx
-     Hackcat
-     Exploit-DB
-     IP-Trace
-     Hide
-     DDOS
-     File-Analyser
-     Fuzzer
-     Take-Control
-     Webcam
-     NetMap
-     SQL-In
-    //*/
+        //if input was not null, put it on a new line
+        if (input.text != "")
+        {
+            output.text += Environment.NewLine; //put further commands on new line
+        }
+
+        input.text = ""; //clear command input text
+        input.Select();
+        input.ActivateInputField(); //keep command line input field selected, and activated
+
+    }
+
 
 }

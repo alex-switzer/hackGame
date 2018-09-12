@@ -7,26 +7,27 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Clear : commands
+    class Hack : commands
     {
-
-        public Clear(InputField input, Text output, Text username)
+        public Hack(InputField input, Text output, Text username) //purpose of command is unclear
         {
             this.input = input;
             this.output = output;
             this.username = username;
 
-            name = "Clear";
-            description = "Clear the screen of all text.";
+            name = "Hack";
+            description = "Hack a computer.";
 
 
         }
 
         public override void lantern(List<string> result)
-        {
+        { 
 
-            output.text = "";
+            output.text += "You stole $10! good job. (from a 60 year old)";
+            
         }
+
 
     }
 }

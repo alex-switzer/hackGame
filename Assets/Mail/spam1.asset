@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
   m_Name: spam1
   m_EditorClassIdentifier: 
-  address: Free Monii
-  subject: Free $500 gift cards here now just open this link
-  boddy: ???
+  address: Nigerian Prince
+  subject: Free $500 gift cards, no survey
+  body: 'sir! just open link! no scam, trust me.
+
+    https://www.malware4u.net/download_trojan.exe'

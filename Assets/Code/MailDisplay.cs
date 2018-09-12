@@ -9,7 +9,7 @@ public class MailDisplay : MonoBehaviour {
 
     public Text address;
     public Text subject;
-    public Text boddy;
+    public Text body;
     public Button openMail;
     public Button closeMail;
 
@@ -67,9 +67,9 @@ public class MailDisplay : MonoBehaviour {
         {
             subject.text = mail.subject;
         }
-        if (boddy != null)
+        if (body != null)
         {
-            boddy.text = mail.boddy;
+            body.text = mail.body;
         }
     }
 }

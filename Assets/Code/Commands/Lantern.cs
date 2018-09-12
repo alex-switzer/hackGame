@@ -7,25 +7,24 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Clear : commands
+    class Lantern : commands
     {
-
-        public Clear(InputField input, Text output, Text username)
+        public Lantern(InputField input, Text output, Text username) //purpose of this command is unclear
         {
+
             this.input = input;
             this.output = output;
             this.username = username;
 
-            name = "Clear";
-            description = "Clear the screen of all text.";
+            name = "Lantern";
+            description = "Run it now!";
 
 
         }
 
         public override void lantern(List<string> result)
         {
-
-            output.text = "";
+            output.text += "Get hacked kid!";
         }
 
     }

@@ -2,13 +2,13 @@
 -target:library
 -nowarn:0169
 -langversion:7
--out:"C:/Users/15397/Desktop/HackGame V5/Temp/Assembly-CSharp.dll"
+-out:C:/Users/15320/Desktop/hackGame/Temp/Assembly-CSharp.dll
 -nostdlib
 -unsafe
--r:"C:/Users/15397/Desktop/HackGame V5/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
--r:"C:/Users/15397/Desktop/HackGame V5/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
--r:"C:/Users/15397/Desktop/HackGame V5/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
--r:"C:/Users/15397/Desktop/HackGame V5/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+-r:C:/Users/15320/Desktop/hackGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:C:/Users/15320/Desktop/hackGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+-r:C:/Users/15320/Desktop/hackGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
+-r:C:/Users/15320/Desktop/hackGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -76,8 +76,8 @@
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
 -r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
--r:C:/Users/15397/AppData/Local/Unity/cache/packages/staging-packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
--r:C:/Users/15397/AppData/Local/Unity/cache/packages/staging-packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
+-r:C:/Users/15320/AppData/Local/Unity/cache/packages/staging-packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll
+-r:C:/Users/15320/AppData/Local/Unity/cache/packages/staging-packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll"
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.dll"
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.Core.dll"
@@ -292,20 +292,20 @@
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
 -d:UNITY_PRO_LICENSE
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/ActivateEmail.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/autoDivWidth.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/commands.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Clear.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Hack.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Help.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/IP-Trace.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Lantern.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Manual.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Ping.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Sphinx.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Commands/Time.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/Console.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/MailData.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/MailDisplay.cs"
--i:"C:/Users/15397/Desktop/HackGame V5/Assets/Code/stringClassifier.cs"
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/ActivateEmail.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/autoDivWidth.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/commands.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Clear.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Hack.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Help.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/IP-Trace.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Lantern.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Manual.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Ping.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Sphinx.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Commands/Time.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/Console.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/MailData.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/MailDisplay.cs
+-i:C:/Users/15320/Desktop/hackGame/Assets/Code/stringClassifier.cs
 -v:0

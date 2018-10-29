@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
   m_Name: Employer3
   m_EditorClassIdentifier: 
-  address: jason@hctech
+  address: jason@hctech.com
   subject: You are fired
   body: "Your peformance is unfortunately not what our company aims to uphold. Please
     collect your things and go. \n-J"

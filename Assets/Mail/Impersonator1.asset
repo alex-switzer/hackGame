@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
   m_Name: Impersonator1
   m_EditorClassIdentifier: 
-  address: jjason@hctech
+  address: jason@hctek.com
   subject: Information on Mr Watson
   body: Hi, uh I require that you give me the sensitive documents regarding Mr Watson's
     case. Thanks in advance. - Your employer

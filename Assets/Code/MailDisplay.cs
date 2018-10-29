@@ -58,16 +58,16 @@ public class MailDisplay : MonoBehaviour {
 
     void Draw()
     {
-        if (address != null)
+        if (address != null && mail != null)
         {
             address.text = mail.address;
         }
 
-        if (subject != null)
+        if (subject != null && mail != null)
         {
             subject.text = mail.subject;
         }
-        if (body != null)
+        if (body != null && mail != null)
         {
             body.text = mail.body;
         }

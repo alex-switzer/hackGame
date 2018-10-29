@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Employer2
   m_EditorClassIdentifier: 
   address: jason@hctech.com
-  subject: Look through this file
-  body: "Please find attached is a suspicious file that you need to look through.
-    Let me know what you find. \n-J"
+  subject: Nice job
+  body: "Huh, that's odd. Oh well, It seems like it was no real threat after all.
+    Great work on that first task. I'm sure I will find more work for you very soon.
+    \n\n-J"

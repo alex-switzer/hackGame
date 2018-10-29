@@ -11,7 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
   m_Name: Employer1
   m_EditorClassIdentifier: 
-  address: jason@hctech
-  subject: Welcome to my company!
-  body: "You passed the entry requirements for a cybersecurity analyst very easily.
-    I look forward to working with you in the future. \n-J\n"
+  address: jason@hctech.com
+  subject: Welcome to Hail Corporate Technologies!
+  body: "You passed the entry requirements for this role as a cybersecurity analyst
+    very easily, and although there wasn't much selection (as this is a small, but
+    high turnover company), it was an easy choice.\n\nYour job will include dealing
+    with a variety of roles including but not limited to: protecting/investigating
+    threats from particular individuals, investigating suspicious files that get sent
+    to me, or whatever tech related job I have in mind to throw at you. \n\nI'm sure
+    that you're aware by now that I rely on you to protect this company, as I am not
+    well versed in this particular field. \n\nI had our previous IT guy set up this
+    account for you to use. All your progress is tracked, and your findings get automatically
+    sent to me.\n\n-J\n"

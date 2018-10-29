@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+
 namespace backupGame.command
 {
     class IP_Trace : commands
@@ -33,22 +34,36 @@ namespace backupGame.command
                 "Syria" ,
                 "Niger",
                 "Yemen",
-                "Antarctica" };
+                "Antarctica",
+                "Bosnia and Herzegovina",
+                "Democratic Republic of the Congo",
+                "Jamaica"
+            };
+
+            string mission1IP = "73.7.145.117"; //add more if necessary.
 
 
             if (result.Count == 2)
             {
-                if (stringClassifier.getIP(result[1]))
+                if (StringClassifier.getIP(result[1])) //if it is a real ip
                 {
                     int countryIndex = rnd.Next(countries.Length); //pseudorandomly generate country index for array
 
-                    //output.text += ("This person is likely from {0}!", countries[countryIndex];) }
+                    output.text += ("This person is likely from " + countries[countryIndex]);
+
+                    if (result[1] == mission1IP)
+                    {
+                        ActivateEmail employer2 = new ActivateEmail(); //instantiate new object of class, 
+                        
+                        employer2.Appear(); //to call appear().
+
+                    }
                 }
 
-                else output.text += "Use IP-Trace [IP]";
+                else if (StringClassifier.getIP(result[1]) == false) output.text += "Your IP is in the incorrect format!";
+
             }
-
-
+            else output.text += "Use ip-trace [IP]";
         }
     }
 }

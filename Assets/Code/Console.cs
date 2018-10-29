@@ -1,19 +1,13 @@
 ﻿using backupGame;
 using backupGame.command;
+using backupGame.Command;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-//using static UnityEditor.Experimental.Build.AssetBundle.BuildCommandSet;
-
-
 
 public class Console : MonoBehaviour {
-
-    
-    public const string prefix = ">";
-    public const string usernameString = "user@192.168.0.3 ";
 
     public InputField input;
     public Text output;
@@ -33,7 +27,8 @@ public class Console : MonoBehaviour {
                 new Lantern(input, output, username),
                 new IP_Trace(input, output, username),
                 new backupGame.command.Time(input, output, username),
-                new Hack(input, output, username)
+                new Hack(input, output, username),
+                new Manual(input, output, username)
             };
 
         //call RunCommand on End Edit of input
@@ -62,7 +57,7 @@ public class Console : MonoBehaviour {
             {
                 string registeredCommand = listOfCommands[i].name.ToLower();
 
-                if (registeredCommand == userCommand)
+                if (userCommand == registeredCommand)
                 {
                     listOfCommands[i].lantern(userInputParamters); //execute the matching command
 
@@ -84,8 +79,8 @@ public class Console : MonoBehaviour {
     public static void Reselect(Text output, InputField input, bool commandFound) //this routine simluates inherent command line functionality and cleanliness in putting commands
     {
 
-        //if input was not null, put it on a new line
-        if (input.text != "")
+        //if input was not null or empty spaces, put it on a new line
+        if (input.text.Length > 0)
         {
             output.text += Environment.NewLine; //put further commands on new line
         }

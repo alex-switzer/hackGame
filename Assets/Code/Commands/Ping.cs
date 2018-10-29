@@ -22,18 +22,18 @@ namespace backupGame.command
         public override void lantern(List<string> result)
         {
             Random rnd = new Random();
-            string errorMessage = "Use Ping [IP]";
+            string errorMessage = "Use ping [IP]";
 
             if (result.Count == 2) // i.e. if the user entered the name of the command and some numbers to ping
             {
-                if (stringClassifier.getIP(result[1]))
+                if (StringClassifier.getIP(result[1]))
                 {
                     output.text += ( "Pinging " + result[1] + "; Respone time " + rnd.Next(10, 100) + "ms");
                 }
+
+                else if (StringClassifier.getIP(result[1]) == false) output.text += "Your IP address is incorrect";
             }
             else output.text += (errorMessage);
         }
-
-
     }
 }

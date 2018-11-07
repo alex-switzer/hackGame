@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Hack : commands
+    class Hack : Commands
     {
         public Hack(InputField input, Text output, Text username) //purpose of command is unclear
         {

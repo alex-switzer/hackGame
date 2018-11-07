@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class autoDivWidth : MonoBehaviour {
+public class AutoDivWidth : MonoBehaviour {
 
     public RectTransform parentRect;
     public GridLayoutGroup gridLayout;
@@ -16,9 +16,4 @@ public class autoDivWidth : MonoBehaviour {
         gridLayout.cellSize = new Vector2(size, gridLayout.cellSize.y);
 
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

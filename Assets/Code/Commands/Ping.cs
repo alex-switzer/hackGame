@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Ping : commands
+    class Ping : Commands
     {
         public Ping(InputField input, Text output, Text username)
         {

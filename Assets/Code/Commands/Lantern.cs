@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Lantern : commands
+    class Lantern : Commands
     {
         public Lantern(InputField input, Text output, Text username) //purpose of this command is unclear
         {

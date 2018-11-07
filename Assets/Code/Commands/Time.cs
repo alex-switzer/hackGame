@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Time : commands
+    class Time : Commands
     {
         public Time(InputField input, Text output, Text username)
         {

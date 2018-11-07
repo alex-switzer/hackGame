@@ -13,12 +13,12 @@ public class Console : MonoBehaviour {
     public Text output;
     public Text username;
 
-    private List<commands> listOfCommands;
+    private List<Commands> listOfCommands;
 
 
     void Start () {
 
-        listOfCommands = new List<commands>
+        listOfCommands = new List<Commands>
             {
                 new Help(input, output, username),
                 new backupGame.command.Ping(input, output, username),

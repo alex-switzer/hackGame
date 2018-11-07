@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace backupGame
 {   
-    class commands
+    class Commands
     {
 
         public InputField input;
@@ -21,7 +21,7 @@ namespace backupGame
         {
  
         }
-        public virtual void lantern(List<string> result, List<commands> listOfCommands)
+        public virtual void lantern(List<string> result, List<Commands> listOfCommands)
         {
 
         }

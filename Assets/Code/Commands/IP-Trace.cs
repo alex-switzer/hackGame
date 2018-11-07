@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class IP_Trace : commands
+    class IP_Trace : Commands
     {
         public IP_Trace(InputField input, Text output, Text username)
         {

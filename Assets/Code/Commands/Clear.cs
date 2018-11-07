@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
-    class Clear : commands
+    class Clear : Commands
     {
 
         public Clear(InputField input, Text output, Text username)

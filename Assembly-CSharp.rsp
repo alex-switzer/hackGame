@@ -2,7 +2,7 @@
 -target:library
 -nowarn:0169
 -langversion:7
--out:"C:/Users/Baxter/Desktop/Hackgame v5/Temp/Assembly-CSharp.dll"
+-out:"C:/Users/Baxter/Desktop/HackGame V5.5/Temp/Assembly-CSharp.dll"
 -nostdlib
 -unsafe
 -r:"D:\Program Files\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
@@ -67,10 +67,10 @@
 -r:"D:\Program Files\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
 -r:"D:\Program Files\Editor\Data\Managed/UnityEditor.dll"
 -r:"D:\Program Files\Editor\Data\Managed/Unity.Locator.dll"
--r:"C:/Users/Baxter/Desktop/Hackgame v5/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
--r:"C:/Users/Baxter/Desktop/Hackgame v5/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
--r:"C:/Users/Baxter/Desktop/Hackgame v5/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
--r:"C:/Users/Baxter/Desktop/Hackgame v5/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+-r:"C:/Users/Baxter/Desktop/HackGame V5.5/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll"
+-r:"C:/Users/Baxter/Desktop/HackGame V5.5/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
+-r:"C:/Users/Baxter/Desktop/HackGame V5.5/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
+-r:"C:/Users/Baxter/Desktop/HackGame V5.5/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
 -r:"D:/Program Files/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 -r:"D:/Program Files/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
 -r:"D:/Program Files/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
@@ -209,6 +209,7 @@
 -d:UNITY_2018
 -d:PLATFORM_ARCH_64
 -d:UNITY_64
+-d:UNITY_ANALYTICS
 -d:ENABLE_AUDIO
 -d:ENABLE_CACHING
 -d:ENABLE_CLOTH
@@ -291,20 +292,20 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/ActivateEmail.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/autoDivWidth.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/commands.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Clear.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Hack.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Help.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/IP-Trace.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Lantern.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Manual.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Ping.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Sphinx.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Commands/Time.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/Console.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/MailData.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/MailDisplay.cs"
--i:"C:/Users/Baxter/Desktop/Hackgame v5/Assets/Code/stringClassifier.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/ActivateEmail.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/autoDivWidth.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/commands.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Clear.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Hack.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Help.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/IP-Trace.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Lantern.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Manual.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Ping.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Sphinx.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Time.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Console.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/MailData.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/MailDisplay.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/stringClassifier.cs"
 -v:0

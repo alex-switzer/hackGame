@@ -14,7 +14,7 @@ namespace backupGame.command
             this.username = username;
 
             name = "IP-Trace";
-            description = "Find out where an IP address is located in the real world.";
+            description = "Discover the location of origin of an IP address";
         }
 
         public override void lantern(List<string> result)

@@ -22,9 +22,10 @@ namespace backupGame.Command
         public override void lantern(List<string> result)
         {
             //Uses an Indexed Access Table driven method to return command information
+            string commandSpecified = " ";
 
             string[] manualContent = {
-                "Command not found. Please input a registered command. type [help] for a list.",
+                "' Is not a registered command. Type [help] for a list.",
                 "NAME: Clear. DESCRIPTION: Clears the screen of all text. USAGE: [clear]",
                 "NAME: Hack. DESCRIPTION: Hacks a computer. USAGE: [hack]",
                 "NAME: Help. DESCRIPTION: Lists all the commands, along with basic information about their purpose. USAGE: [help]",
@@ -39,15 +40,19 @@ namespace backupGame.Command
 
             try
             {
-                result[1].ToLower(); //test if specified command is null
+                commandSpecified = result[1].ToLower(); //test if specified command is null
                 notNull = true;
             }
-            catch (Exception) { output.text += manualContent[0]; } //display error
+            catch (Exception) { output.text += "ERROR: ' " +  manualContent[0]; } //display error
 
             if (notNull)
             {
-                string commandSpecified = result[1].ToLower();
-                output.text += manualContent[GetIndex(commandSpecified)]; //return description after finding index.
+                int index = GetIndex(commandSpecified);
+                if (GetIndex(commandSpecified) != 0)
+                {
+                    output.text += manualContent[index]; //return description after finding index, and is not an error
+                }
+                else output.text += "ERROR: '" + commandSpecified + manualContent[index];
             }
             
         }

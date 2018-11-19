@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  address: Game Developers
+  subject: Learn How To Play!
+  body: "Welcome to the game. To the left is the console, where you can type in commands
+    and receive output. \n\nTo start out, if you haven't already, please use the help
+    command by typing 'help' and pressing enter, or clicking away from the console.
+    This will give you a list of commands that you can use. \n\nTo find out additional
+    information on how to use a command, the manual command will be of use to you.
+    \n\nYou will receive information from various people, including missions from
+    your employer, which is who you are working for. Your welcome email from him will
+    give the details regarding that. \n\nHave fun playing!"

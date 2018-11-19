@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AutoDivWidth : MonoBehaviour {
+public class autoDivWidth : MonoBehaviour {
 
     public RectTransform parentRect;
     public GridLayoutGroup gridLayout;

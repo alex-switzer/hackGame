@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using UnityEngine;
 
 namespace backupGame.command
 {
@@ -21,18 +22,15 @@ namespace backupGame.command
 
         public override void lantern(List<string> result, List<Commands> listOfCommands)
         {
-            output.text += "List of commands:" + Environment.NewLine;
-            const int paddingBuffer = 30; //default gap between command and description 
-            
+            output.text += "List of commands:" + Environment.NewLine + Environment.NewLine; //2 new lines to create a 1 line gap between the content
+            string padding = "  "; //easily adjustible to find best setting
+
             foreach (var command in listOfCommands)
             {
-                int paddingGap = paddingBuffer - command.name.Length;
-                if (paddingGap < 0) paddingGap *= -1; //if the name is longer than the buffer of 30, avoid errors by avoiding negative numbers
-                output.text += ("Command:  " + command.name + Environment.NewLine + "Description: " + command.description + Environment.NewLine ); 
-                
+                output.text += ("Command:  " + command.name + Environment.NewLine);
+                output.text += (padding + "Description: " + command.description + Environment.NewLine);
             }
-
+            
         }
-
     }
 }

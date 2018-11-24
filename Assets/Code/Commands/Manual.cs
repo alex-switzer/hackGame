@@ -25,7 +25,7 @@ namespace backupGame.Command
             string commandSpecified = " ";
 
             string[] manualContent = {
-                "' Is not a registered command. Type [help] for a list.",
+                "' Is not a registered command in the manual. Type [help] for a list.",
                 "NAME: Clear. DESCRIPTION: Clears the screen of all text. USAGE: [clear]",
                 "NAME: Hack. DESCRIPTION: Hacks a computer. USAGE: [hack]",
                 "NAME: Help. DESCRIPTION: Lists all the commands, along with basic information about their purpose. USAGE: [help]",

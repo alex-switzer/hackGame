@@ -2,10 +2,10 @@
 -target:library
 -nowarn:0169
 -langversion:7
--out:"C:/Users/Baxter/Desktop/Hackgame v5/Temp/Unity.TextMeshPro.Editor.dll"
+-out:"C:/Users/Baxter/Desktop/HackGame V5.5/Temp/Unity.TextMeshPro.Editor.dll"
 -nostdlib
 -unsafe
--r:"C:/Users/Baxter/Desktop/Hackgame v5/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+-r:"C:/Users/Baxter/Desktop/HackGame V5.5/Library/ScriptAssemblies/Unity.TextMeshPro.dll"
 -r:"D:\Program Files\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"D:\Program Files\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"D:\Program Files\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -225,6 +225,7 @@
 -d:UNITY_2018
 -d:PLATFORM_ARCH_64
 -d:UNITY_64
+-d:UNITY_ANALYTICS
 -d:ENABLE_AUDIO
 -d:ENABLE_CACHING
 -d:ENABLE_CLOTH

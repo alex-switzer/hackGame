@@ -15,9 +15,12 @@ MonoBehaviour:
   subject: Learn How To Play!
   body: "Welcome to the game. To the left is the console, where you can type in commands
     and receive output. \n\nTo start out, if you haven't already, please use the help
-    command by typing 'help' and pressing enter, or clicking away from the console.
-    This will give you a list of commands that you can use. \n\nTo find out additional
-    information on how to use a command, the manual command will be of use to you.
-    \n\nYou will receive information from various people, including missions from
-    your employer, which is who you are working for. Your welcome email from him will
-    give the details regarding that. \n\nHave fun playing!"
+    command by typing 'help' (without apostrophes or brackets) and pressing enter,
+    or clicking away from the console. This will give you a list of commands that
+    you can use. \n\nTo find out additional information on how to use a command, the
+    manual command will be of use to you. \n\nPlease note that the help and manual
+    commands use square brackets like this: [help] to denote that the text inside
+    the brackets are command names, and as such should not be typed in the console
+    with the brackets. \n\nYou will receive information from various people, including
+    missions from your employer, which is who you are working for. Your welcome email
+    from him will give the details regarding that. "

@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 namespace backupGame.command
 {
+
+
     class IP_Trace : Commands
     {
+
         public IP_Trace(InputField input, Text output, Text username)
         {
             this.input = input;
@@ -53,10 +56,11 @@ namespace backupGame.command
 
                     if (result[1] == mission1IP)
                     {
-                        ActivateEmail employer2 = new ActivateEmail(); //instantiate new object of class, 
-                        
-                        employer2.Appear(); //to call appear().
-
+                        output.text += Environment.NewLine;
+                        output.text += ("Mission 1 complete. Suspect tracked. Check your inbox.");
+                        //instantiating activateEmail from here makes everything null, and therefore unusable, for some reason. 
+                        //ActivateEmail employer2 = new ActivateEmail(); //instantiate new object of class
+                        //employer2.Appear(); //to call appear().
                     }
                 }
 

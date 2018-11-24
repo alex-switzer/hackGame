@@ -46,7 +46,7 @@ public class Console : MonoBehaviour {
                                    : new string[] { element })  // Keep the entire item
              .SelectMany(element => element).ToList();
 
-        string errorText = "Please enter a valid command. For a full list of commands, type 'help'"; //setting the default message to an error
+        string errorText = "' Is not a registered command. Type [help] for a list."; //setting the default message to an error
         bool commandFound = false;
 
         string userCommand = userInputParamters[0].ToLower(); //first parameter is always the command name
@@ -69,7 +69,7 @@ public class Console : MonoBehaviour {
             }
         }
 
-        if (commandFound == false && userInputParamters[0] != "") output.text += errorText; //only output error if input was not null. Fixes click away constant error message problem
+        if (commandFound == false && userInputParamters[0] != "") output.text += "ERROR: '" + userInputParamters[0] + errorText; //only output error if input was not null.
         
 
         Reselect(output,input, commandFound); 

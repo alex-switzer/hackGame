@@ -292,7 +292,6 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/ActivateEmail.cs"
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/autoDivWidth.cs"
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/commands.cs"
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Commands/Clear.cs"
@@ -307,5 +306,6 @@
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/Console.cs"
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/MailData.cs"
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/MailDisplay.cs"
+-i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/MissionChecker.cs"
 -i:"C:/Users/Baxter/Desktop/HackGame V5.5/Assets/Code/stringClassifier.cs"
 -v:0

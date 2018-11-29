@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Mission1
   m_EditorClassIdentifier: 
   address: jason@hctech.com
-  subject: 'JOB: Investigate this IP'
+  subject: 'JOB 1: Investigate this IP'
   body: "Greetings.\n\nFor your first task I would like you to investigate an IP address
     (attached) that was found trying to make several unauthorised requests to our
     database, but luckily our 'firewall' blocked them (whatever that is). \n\nI believe

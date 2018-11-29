@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: Mission2
   m_EditorClassIdentifier: 
   address: jason@hctech.com
-  subject: 'JOB: Look through this file'
-  body: "Please find attached is a suspicious file that you need to look through.
-    Let me know what you find. \n\n-J"
+  subject: 'JOB2: Look through this file'
+  body: "Greetings. \n\nPlease find a file attached that was sent to one of my colleagues.
+    \n\nLook through it and find out if it is suspicious or not. I would hate for
+    it to be malware or some other nasty thing like that.\n\nFile: WannaCry.exe\n\nNote:
+    There is no filesystem needed to access the file. You can access it directly by
+    its FULL filename and extension in the console.\n\n-J"

@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: Employer3
   m_EditorClassIdentifier: 
   address: jason@hctech.com
-  subject: You are fired
-  body: "Your peformance is unfortunately not what our company aims to uphold. Please
-    collect your things and go. \n-J"
+  subject: Well Done!
+  body: "Well I didn't expect that! \n\nI'm very thankful that my colleague was suspicious
+    and sent it for inspection instead of running it and infecting one of our computers!
+    The damage could of been significant. \n\nThis is exactly why I needed you for
+    this job. \n\n-J"

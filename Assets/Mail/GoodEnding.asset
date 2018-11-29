@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
+  m_Name: GoodEnding
+  m_EditorClassIdentifier: 
+  address: jason@hctech.com
+  subject: Excellent Work!!
+  body: "I'm very pleased that you were able to identify that impersonator! I just
+    discovered it myself recently. I'm glad you didn't do what he asked, that's really
+    illegal and would of gotten you fired. \n\nGreat work, my confidence in your skills
+    is now very high. You are just the cybersecurity professional I need. \n\nDevelopers:\n\nCongratulations!
+    You have completed the game, and gotten the good ending. Was this your first time
+    playing? If so, great job! \n\nLooking for more to do? Try and find the easter
+    eggs if you haven't already (there are 2). You could also try out all the commands
+    that weren't necessary for mission completion."

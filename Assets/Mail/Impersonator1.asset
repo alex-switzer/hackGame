@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: Impersonator1
   m_EditorClassIdentifier: 
   address: jason@hctek.com
-  subject: Information on Mr Watson
-  body: Hi, uh I require that you give me the sensitive documents regarding Mr Watson's
-    case. Thanks in advance. - Your employer
+  subject: New task for you.
+  body: "Greetings, it is me, Jason again.\n\nThere's a bit of a sitation here. I
+    need you to gain access/find password to an email account belonging to an employee
+    at the company. \n\nI would like to see who and what she has been emailing.\n\nDiscretion
+    is required.  Can I count on you to do this?\n\nEmail: amanda@hctech.com"

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
-
+using UnityEngine;
 
 namespace backupGame.command
 {
-
-
     class IP_Trace : Commands
     {
 
@@ -22,7 +20,7 @@ namespace backupGame.command
 
         public override void lantern(List<string> result)
         {
-            Random rnd = new Random();
+            System.Random rnd = new System.Random();
 
 
             string[] countries = { "United States of America",
@@ -57,10 +55,8 @@ namespace backupGame.command
                     if (result[1] == mission1IP)
                     {
                         output.text += Environment.NewLine;
-                        output.text += ("Mission 1 complete. Suspect tracked. Check your inbox.");
-                        //instantiating activateEmail from here makes everything null, and therefore unusable, for some reason. 
-                        //ActivateEmail employer2 = new ActivateEmail(); //instantiate new object of class
-                        //employer2.Appear(); //to call appear().
+                        output.text += ("Job 1 complete. Suspect tracked. Check your inbox.");
+                        EnableEmails();
                     }
                 }
 
@@ -69,5 +65,20 @@ namespace backupGame.command
             }
             else output.text += "Use ip-trace [IP]";
         }
+
+        public static void EnableEmails() //replaces script that was not needed.
+        {
+            //enable debrief email
+            GameObject employer2Email = GameObject.Find("Employer2");
+            MonoBehaviour mailDisplayScript = employer2Email.GetComponent("MailDisplay") as MonoBehaviour;
+            mailDisplayScript.enabled = true;
+
+            //enable mission 2 email
+            GameObject mission2Email = GameObject.Find("Mission2");
+            MonoBehaviour mailDisplayScript2 = mission2Email.GetComponent("MailDisplay") as MonoBehaviour;
+            mailDisplayScript2.enabled = true;
+
+        }
+
     }
 }

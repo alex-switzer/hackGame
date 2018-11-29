@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4bd3839a94f5ed4b9af70d0eb8ea7f9, type: 3}
+  m_Name: Employer4
+  m_EditorClassIdentifier: 
+  address: jason@hctech.com
+  subject: You are fired
+  body: "Greetings. I recently received an angry email from amanda complaining about
+    her account getting hacked. \n\nIll cut straight to the point. The hack was linked
+    to your account.\n\nI can see your inbox, and noticed that you received an email
+    from what appears to be me at first glance, but upon further inspection you should
+    of noticed that the email was incorrect, and so it was an IMPERSONATOR!\n\nI am
+    not very happy that you did not notice, and then decided to go through with something
+    so illegal! \n\nI am sorry but I can no longer say that you are an employee of
+    mine, as this is too much of an offence to overlook.\n\n-J"

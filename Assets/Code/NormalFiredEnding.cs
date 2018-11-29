@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
-public class MailDisplay : MonoBehaviour {
+//this is the same code as the Maildisplay script, it just makes it able to have a prefab hold more possible emails. 
+//Is used to hold the 3 different emails for the ending. That is the: normal fired (refused legit work), bad fired (hacked amanda, and good ending (refused to hack amanda).
+
+public class NormalFiredEnding : MonoBehaviour {
 
     public MailData mail;
-
     public Text address;
     public Text subject;
     public Text body;
-    public Button openMail;
-    public Button closeMail;
-
+    public UnityEngine.UI.Button openMail;
+    public UnityEngine.UI.Button closeMail;
     public RectTransform mailInfo;
 
-    // Use this for initialization
+
     void Start()
     {
         if (openMail != null)
@@ -34,13 +36,13 @@ public class MailDisplay : MonoBehaviour {
         if (mailInfo != null)
         {
 
-            mailInfo.Translate(new Vector3(-513, 0,0));
+            mailInfo.Translate(new Vector3(-513, 0, 0));
 
             MailDisplay data = mailInfo.GetComponent<MailDisplay>();
 
             data.mail = mail;
 
-            data.Draw();
+            data.Draw(); 
 
         }
     }
@@ -72,4 +74,5 @@ public class MailDisplay : MonoBehaviour {
             body.text = mail.body;
         }
     }
+
 }

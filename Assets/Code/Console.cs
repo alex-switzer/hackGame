@@ -41,19 +41,19 @@ public class Console : MonoBehaviour {
     {
         string line = input.text;
 
-        List<string> userInputParamters = line.Split('"') //store all user input parameters
+        List<string> userInputParameters = line.Split('"') //store all user input parameters
              .Select((element, index) => index % 2 == 0  // If even index
-                                   ? element.Split(new[] { ' ' })  // Split the item
+                                   ? element.Split(new[] {' '})  // Split the item
                                    : new string[] { element })  // Keep the entire item
              .SelectMany(element => element).ToList();
 
         string errorText = "' Is not a registered command. Type [help] for a list."; //setting the default message to an error
+
         bool commandFound = false;
 
-        string userCommand = userInputParamters[0].ToLower(); //first parameter is always the command name
-
-        if (userInputParamters.Count != 0)
+        if (userInputParameters.Count != 0)
         {
+            string userCommand = userInputParameters[0].ToLower(); //first parameter is always the command name
 
             for (int i = 0; i < listOfCommands.Count; i++)
             {
@@ -63,8 +63,8 @@ public class Console : MonoBehaviour {
                 {
                     if (NotFired()) //I'm aware that 4 levels of nesting is not good.
                     {
-                        listOfCommands[i].lantern(userInputParamters); //execute the matching command, if they haven't been fired.  
-                        if (registeredCommand == "help") listOfCommands[i].lantern(userInputParamters, listOfCommands);
+                        listOfCommands[i].lantern(userInputParameters); //execute the matching command, if they haven't been fired.  
+                        if (registeredCommand == "help") listOfCommands[i].lantern(userInputParameters, listOfCommands);
                         commandFound = true; //matching command found, declare success
                     }
                     else output.text += Environment.NewLine + "You have been locked out of your machine. You are fired.";
@@ -78,10 +78,10 @@ public class Console : MonoBehaviour {
 
         }
 
-        if (commandFound == false && userInputParamters[0] != "" && NotFired()) output.text += "ERROR: '" + userInputParamters[0] + errorText; //only output error if input was not null.
+        if (commandFound == false && userInputParameters[0] != "" && NotFired()) output.text += "ERROR: '" + userInputParameters[0] + errorText; //only output error if input was not null.
         
 
-        Reselect(output,input, commandFound); 
+        Reselect(output, input, commandFound); 
 
     }
 

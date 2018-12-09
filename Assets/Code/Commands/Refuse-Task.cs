@@ -18,7 +18,7 @@ namespace backupGame.command
             this.username = username;
 
             name = "Refuse-Task";
-            description = "Refuse the current task assigned to you.";
+            description = "Refuse to do the current task assigned to you.";
         }
 
         public override void lantern(List<string> result)

@@ -18,7 +18,6 @@ namespace backupGame.command
 
             name = "Hack";
             description = "Retreives passwords from email accounts, once supplied!";
-
         }
 
         public override void lantern(List<string> result)
@@ -31,7 +30,7 @@ namespace backupGame.command
                 "'s password is too secure, and cannot be found on any available wordlist",
                 "'s password is too secure, and cannot be found by bruteforcing.",
                 "'s password has been found via bruteforcing! It is: cats07" ,
-                "'s very long password has been found via wordlist: It is: Gofzvrxaretahrj!Cualanxirvtkhygnvjirlecghozi.", //try and decrypt that. 
+                "'s very long password has been found via wordlist: It is: Gofzvrxaretahrj!Cualanxirvtkhygnvjirlecghozi", //try and decrypt that. 
                 "'s password has been found via guessing random letters and symbols! It is: ZWFzdGVyIGVnZw=="}; //Fun (easy) easter egg
             
             //check if supplied email is null

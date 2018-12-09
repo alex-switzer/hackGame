@@ -35,41 +35,41 @@ namespace backupGame.command
                 nullInput = true;
             }
 
-            string[] files = { "mycoolprogram.c", "minesweepercheatengine.exe", "dolphin.cs" };
-            string job2File = "wannacry.exe"; 
+            string[] files = { "mycoolprogram.c", "cheatengine.exe", "dolphin.cs" };
+            string job2File = "wannacry.exe";
 
-            //this output is the same for every command.
-            string[] commandOutput = { Environment.NewLine + "File deconstruction in progress...", Environment.NewLine + "Scanning..." , Environment.NewLine + "Complete!" + Environment.NewLine, Environment.NewLine + "Report:" + Environment.NewLine};
-
-            bool commandFound = false;
-
-            if (fileName == job2File) //wannacry.exe is a ransomware worm.
+            if (!nullInput) //only check for match if they entered a file
             {
-                commandFound = true;
-                PrintOutput(false, false, true, true, commandOutput, output);
-                output.text += Environment.NewLine + "Job 2 complete. Check your inbox.";
-                EnableEmails();
-            }
+                bool commandFound = false;
 
-            else if (fileName == files[0]) //mycoolprogram.c is a worm... for some reason.
-            {
-                commandFound = true;
-                PrintOutput(false, false, false, true, commandOutput, output);
-            }
+                if (fileName == job2File) //wannacry.exe is a ransomware worm.
+                {
+                    commandFound = true;
+                    PrintOutput(false, false, true, true, output);
+                    output.text += Environment.NewLine + "Job 2 complete. Check your inbox.";
+                    EnableEmails();
+                }
 
-            else if (fileName == files[1]) //minesweepercheatengine.exe is a trojan type of malware.
-            {
-                commandFound = true;
-                PrintOutput(true, true, false, false, commandOutput, output);
-            }
+                else if (fileName == files[0]) //mycoolprogram.c is a worm... for some reason.
+                {
+                    commandFound = true;
+                    PrintOutput(false, false, false, true, output); 
+                }
 
-            else if (fileName == files[2]) //dolphin.cs is a harmless file
-            {
-                commandFound = true;
-                PrintOutput(false, false, false, false, commandOutput, output);
-            }
+                else if (fileName == files[1]) //minesweepercheatengine.exe is a trojan type of malware.
+                {
+                    commandFound = true;
+                    PrintOutput(true, true, false, false, output);
+                }
 
-            if (!nullInput && commandFound == false) { output.text += "'" + fileName + "' is not found and cannot be reverse-engineered."; }
+                else if (fileName == files[2]) //dolphin.cs is a harmless file
+                {
+                    commandFound = true;
+                    PrintOutput(false, false, false, false, output);
+                }
+
+                if (commandFound == false) { output.text += "'" + fileName + "' is not found and cannot be reverse-engineered."; }
+            }
             
         }
 
@@ -87,21 +87,28 @@ namespace backupGame.command
 
         }
 
-        public static void PrintOutput(bool trojan, bool malware, bool ransomware, bool worm, string[] commandOutput, Text output) //prints out the required output for the reverse-engineer command. 
+        public static void PrintOutput(bool trojan, bool malware, bool ransomware, bool worm, Text output) //prints out the required output for the reverse-engineer command. 
         {
-            string gap = Environment.NewLine;
+            string newline = Environment.NewLine;
+
+            //this output is the same for every command.
+            string[] commandOutput = { newline + "File deconstruction in progress...", newline + "Scanning...", newline + "Complete!" + newline, newline + "Report:" + newline };
+
 
             //print base text that is the same every time
-            output.text += commandOutput[0] + commandOutput[1] + commandOutput[2] + commandOutput[3] + Environment.NewLine;
-            output.text += "Trojan: " + trojan.ToString() + gap;
-            output.text += "Malware " + malware.ToString() + gap;
-            output.text += "Ransomware: " + ransomware.ToString() + gap;
-            output.text += "Worm: " + worm.ToString() + gap;
+            output.text += commandOutput[0] + commandOutput[1] + commandOutput[2] + commandOutput[3];
 
-            if (trojan == true | malware == true | ransomware == true | worm == true) //if it is any malicious file, recommend deletion.
+            //print out the results of the scan, which are whether each category is true or false
+            output.text += "Trojan: " + trojan.ToString() + newline;
+            output.text += "Malware " + malware.ToString() + newline;
+            output.text += "Ransomware: " + ransomware.ToString() + newline;
+            output.text += "Worm: " + worm.ToString() + newline;
+
+            if (trojan | malware | ransomware | worm ) //if it is any malicious file, recommend deletion.
             {
                 output.text += "Recommended course of action: Remove Immediately.";
             }
+
             else output.text += "Recommended course of action: Keep.";
         }
     }

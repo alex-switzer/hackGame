@@ -760,8 +760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -82.4, y: 0}
+  m_AnchoredPosition: {x: -17, y: 0}
+  m_SizeDelta: {x: -99.4, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &175856612
 MonoBehaviour:
@@ -1271,12 +1271,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Note: Remember that the use of brackets like [this] indicate that the text
-    inside is the name of a command, or a parameter that you need to specify for one.
-
-
-    Remember: You have the ability to refuse doing any job! Use the command [refuse-task]
-    to do it. Be sure you want to do it! '
+  m_Text: "Note: Remember that the use of brackets like [this] indicate that the text
+    inside is the name of a command, or a parameter that you need to specify for one.\n\nRemember:
+    You have the ability to refuse doing any job! Use the command [refuse-task] to
+    do it. Be sure you want to do it! \n"
 --- !u!222 &293112001
 CanvasRenderer:
   m_ObjectHideFlags: 0
